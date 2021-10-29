@@ -37,3 +37,26 @@ Future<Pferd> fetchPferd() async {
     throw Exception('Failed to load Pferd');
   }
 }
+
+class AktuellesPferd extends StatelessWidget {
+  // In the constructor, require a Todo.
+  const AktuellesPferd({Key? key, required this.pferdeid}) : super(key: key);
+
+  final String title = "Aktuelles Pferd";
+  final String pferdeid;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Aktuelles Pferd: " + pferdeid),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Text(pferdeid),
+        ),
+      ),
+    );
+  }
+}

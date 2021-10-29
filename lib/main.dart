@@ -1,3 +1,4 @@
+import 'package:chioton/aktuelles_pferd.dart';
 import 'package:chioton/custom_icons/horse_head_icons.dart';
 import 'package:flutter/material.dart';
 import 'pferdesuche.dart';
@@ -36,11 +37,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     InitPferdesuche(),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
     MeinStall(),
+    AktuellesPferd(pferdeid: "0"),
   ];
 
   void _onItemTapped(int index) {
@@ -65,12 +63,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Pferdesuche',
           ),
           BottomNavigationBarItem(
-            icon: Icon(HorseHead.horseIcon),
-            label: 'Aktuelles Pferd',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Mein Stall',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(HorseHead.horseIcon),
+            label: 'Aktuelles Pferd',
           ),
         ],
         currentIndex: _selectedIndex,
