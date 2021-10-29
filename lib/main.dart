@@ -65,7 +65,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             label: 'Pferdesuche',
           ),
           BottomNavigationBarItem(
-            icon: Icon(HorseHead.horse_icon),
+            icon: Icon(HorseHead.horseIcon),
             label: 'Aktuelles Pferd',
           ),
           BottomNavigationBarItem(

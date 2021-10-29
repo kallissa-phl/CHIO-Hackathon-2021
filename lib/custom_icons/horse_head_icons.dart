@@ -21,6 +21,6 @@ class HorseHead {
   static const _kFontFam = 'HorseHead';
   static const String? _kFontPkg = null;
 
-  static const IconData horse_icon =
+  static const IconData horseIcon =
       IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
